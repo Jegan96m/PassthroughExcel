@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passthrough Excel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script defer src="converter.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Converter</h2>
+        <div class="input-group">
+            <label for="csvFile">Select CSV File:</label>
+            <input type="file" id="csvFile" accept=".csv">
+        </div>
+        <button class="btn" onclick="convertToXlsx()">Download to XLSX</button>
+    </div>
+</body>
+</html>
