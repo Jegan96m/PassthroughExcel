@@ -98,7 +98,7 @@ function convertToXlsx() {
             XLSX.utils.book_append_sheet(workbook, ws, sheetName);
         });
 
-        const xlsxFileName = `${bookName} handhole status.xlsx`;
+        const xlsxFileName = `${bookName} Handhole Status.xlsx`;
         XLSX.writeFile(workbook, xlsxFileName);
 
         //alert(`Conversion successful! The file has been saved as "${xlsxFileName}".`);
