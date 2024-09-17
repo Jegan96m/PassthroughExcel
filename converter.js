@@ -16,6 +16,7 @@ function convertToXlsx() {
         const sheets = {};
         const workbook = XLSX.utils.book_new();
         let workbookName = '';
+        let bookName='';
 
         let sheetNumber=1;
 
@@ -27,6 +28,10 @@ function convertToXlsx() {
 
             if (!workbookName) {
                 workbookName = rowData['Zone'];
+            }
+
+            if (!bookName) {
+                bookName = rowData['v_project'];
             }
 
             const vPlanValue = rowData['v_plan'];
@@ -93,7 +98,7 @@ function convertToXlsx() {
             XLSX.utils.book_append_sheet(workbook, ws, sheetName);
         });
 
-        const xlsxFileName = `${workbookName}.xlsx`;
+        const xlsxFileName = `${bookName} handhole status.xlsx`;
         XLSX.writeFile(workbook, xlsxFileName);
 
         //alert(`Conversion successful! The file has been saved as "${xlsxFileName}".`);
