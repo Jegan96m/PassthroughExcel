@@ -68,9 +68,9 @@ function convertToXlsx() {
             
             'No':sheetNumber++,
             'SG': sheetName,
-            'Number of HH': `=COUNTA('${sheetName}'!$A$2:$A1000)`,
-            'Number of Y HH': `=COUNTIF('${sheetName}'!$K$2:$K1000,"Y")`, // Formula to count
-            'Number of N HH':  `=COUNTIF('${sheetName}'!$K$2:$K1000,"N")`,
+            'No of HH': `=COUNTA('${sheetName}'!$A$2:$A1000)`,
+            'No of Y HH': `=COUNTIF('${sheetName}'!$K$2:$K1000,"Y")`, // Formula to count
+            'No of N HH':  `=COUNTIF('${sheetName}'!$K$2:$K1000,"N")`,
             'Remaining':`=IF(ISBLANK($C${sheetNumber}),"No Handhole",IF($C${sheetNumber}-($D${sheetNumber}+$E${sheetNumber})=0,"COMPLETED",$C${sheetNumber}-($D${sheetNumber}+$E${sheetNumber})))`,
             'Producer': `=UPPER(IFNA(INDEX('${sheetName}'!$L$2:$L1000,MATCH(TRUE,LEN('${sheetName}'!$L$2:$L1000)>1,0)),""))`,
             'Remark':'',
