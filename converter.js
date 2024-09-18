@@ -49,6 +49,8 @@ function convertToXlsx() {
                     'Tier Rating': rowData['Tier Rating'],
                     '# of Primary Splitters': rowData['# of Primary Splitters'],
                     '# of Secondary Splitters': rowData['# of Secondary Splitters'],
+                    'Equipment': rowData['Equipment'],
+                    'vetro_id': rowData['vetro_id'],
                     'v_created_time': rowData['v_created_time'],
                     'v_last_edited_time': rowData['v_last_edited_time'],
                     'Passthrough': [],
