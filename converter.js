@@ -56,6 +56,8 @@ function convertToXlsx() {
                     'Passthrough': [],
                     'Producer':  [],
                     'Complete Date':  [],
+                    'Remark': [],
+                    'QC': [],
                     
                 };
 
@@ -74,8 +76,9 @@ function convertToXlsx() {
             'No of Y HH': `=COUNTIF('${sheetName}'!$K$2:$K1000,"Y")`, // Formula to count
             'No of N HH':  `=COUNTIF('${sheetName}'!$K$2:$K1000,"N")`,
             'Remaining':`=IF(ISBLANK($C${sheetNumber}),"No Handhole",IF($C${sheetNumber}-($D${sheetNumber}+$E${sheetNumber})=0,"COMPLETED",$C${sheetNumber}-($D${sheetNumber}+$E${sheetNumber})))`,
-            'Producer': `=UPPER(INDEX('${sheetName}'!$L$2:$L1000,MATCH(TRUE,LEN('${sheetName}'!$L$2:$L1000)>1,0)))`,
+            'Producer': `=UPPER(INDEX('${sheetName}'!$N$2:$N1000,MATCH(TRUE,LEN('${sheetName}'!$N$2:$N1000)>1,0)))`,
             'Remark':'',
+            'QC': `=UPPER(INDEX('${sheetName}'!$Q$2:$Q1000,MATCH(TRUE,LEN('${sheetName}'!$Q$2:$Q1000)>1,0)))`,
             
         }));
         
